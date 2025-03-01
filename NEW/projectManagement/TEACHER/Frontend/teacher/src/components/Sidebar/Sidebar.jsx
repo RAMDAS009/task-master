@@ -13,32 +13,19 @@ const Sidebar = ({ onItemClick }) => {
           <div className="option">
             <NavLink to="dashboard" className="nav">
               <img src="./images/home.png" alt="" />
-              <p onClick={() => onItemClick("Dashboard")}>dashboard</p>
+              <p onClick={() => onItemClick("Dashboard")}>Dashboard</p>
             </NavLink>
           </div>
           <div className="option">
-            <NavLink to="task" className="nav">
+            <NavLink to="StudentsList" className="nav">
+              <img src="./images/list.png" alt="" />
+              <p onClick={() => onItemClick("Students List")}>Students List</p>
+            </NavLink>
+          </div>
+          <div className="option">
+            <NavLink to="submittions" className="nav">
               <img src="./images/checklist.png" alt="" />
-              <p onClick={() => onItemClick("Task")}>task</p>
-            </NavLink>
-          </div>
-          <div className="option">
-            <NavLink to="completed" className="nav">
-              <img src="./images/completed.png" alt="" />
-              <p onClick={() => onItemClick("Completed")}>copmpleted</p>
-            </NavLink>
-          </div>
-          <div className="option">
-            <NavLink to="submit" className="nav">
-              <img src="./images/submit.png" alt="" />
-              <p onClick={() => onItemClick("Submitted")}>submitted</p>
-            </NavLink>
-          </div>
-
-          <div className="option">
-            <NavLink to="review" className="nav">
-              <img src="./images/review.png" alt="" />
-              <p onClick={() => onItemClick("Reviews")}>reviews</p>
+              <p onClick={() => onItemClick("Submittions")}>Submittions</p>
             </NavLink>
           </div>
         </div>
