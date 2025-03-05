@@ -1,18 +1,22 @@
-import { useState } from "react";
-import "./App.css";
-import { Route, Router, Routes } from "react-router-dom";
-import TSidebar from "./components/Sidebar/Sidebar";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import StudentList from "./pages/Student-List/StudentList";
+import StudentList from "./pages/StudentList/StudentList";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Submissions from "./pages/Submissions/Submissions";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
-      <Layout />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="StudentsList" element={<StudentList />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="submittions" element={<Submissions />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
